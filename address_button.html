@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address_button</title>
+    <style>
+        
+        #sign-in-button {
+            background-color: #53be56; 
+            padding: 10px 20px; 
+            border: none; 
+            border-radius: 10px; 
+            cursor: pointer; 
+        }
+        #sign-in-button:hover {
+            background-color: skyblue; 
+        }
+    </style>
+</head>
+<body>
+    <button id="sign-in-button">Sign In</button>
+
+<script>
+  const signInButton = document.getElementById('sign-in-button');
+
+  signInButton.addEventListener('click', () => {
+    const userAddress = prompt("Please enter your address:");
+    const states = ["Haryana","haryana", "Punjab","punjab", "Chandigarh","chandigarh"];
+
+    if (states.includes(userAddress)) {
+      window.location.href = "address_sign.html";
+    } else {
+      alert("Sorry, you are not from Haryana, Punjab or Chandigarh.");
+    }
+  });
+</script>
+    
+</body>
+</html>
